@@ -9,6 +9,9 @@ import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { ProjectsComponent } from './modules/projects/projects.component';
 import { ProjectIdeasComponent } from './modules/project-ideas/project-ideas.component';
+import { ModalContentComponent } from './shared/modal-content/modal-content.component';
+import { ModalDialogComponent } from './shared/modal-dialog/modal-dialog.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -17,8 +20,11 @@ import { ProjectIdeasComponent } from './modules/project-ideas/project-ideas.com
     HeaderComponent,
     FooterComponent,
     ProjectsComponent,
+    ModalContentComponent,
+    ModalDialogComponent,
   ],
   imports: [
+    MatIconModule,
     BrowserModule,
     AppRoutingModule
   ],

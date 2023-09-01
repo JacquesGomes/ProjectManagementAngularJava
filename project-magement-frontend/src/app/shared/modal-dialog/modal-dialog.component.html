@@ -1,0 +1,11 @@
+<button mat-button (click)="openModal()">Detalhes</button>
+
+<div *ngIf="isModalOpen()">
+  <div class="overlay"></div>
+  <div class="modal">
+    <button mat-icon-button class="close-button" (click)="closeModal()">
+      <button>Fechar</button>
+    </button>
+    <app-modal-content></app-modal-content>
+  </div>
+</div>

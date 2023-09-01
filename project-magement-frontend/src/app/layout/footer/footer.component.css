@@ -1,4 +1,11 @@
 .footer__container{
-    background-color: #1f1f1f;
+    background-color: #0d0d0d;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+    
 }

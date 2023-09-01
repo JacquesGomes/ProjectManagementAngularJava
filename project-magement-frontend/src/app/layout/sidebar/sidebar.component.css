@@ -1,8 +1,15 @@
-.fixed-sidebar {
-    background-color: #1f1f1f;
-    height: 100%;
+
+.sidebar-content{
+  padding: 30px 20px;
+  
+  font-size: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  cursor: pointer;
+  
 }
 
-.closed{
-  display: none;
+.sidebar-content p:hover{
+  color: #e91d63;
 }
