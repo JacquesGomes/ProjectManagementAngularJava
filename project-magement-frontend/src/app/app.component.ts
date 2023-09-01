@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'project-magement-frontend';
+
+  isSidebarOpen = true;
+
+  toggleSidebar(isOpen: boolean) {
+    this.isSidebarOpen = isOpen;
+  }
+  
 }

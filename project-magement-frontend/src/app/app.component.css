@@ -1,12 +1,25 @@
 .app__container{
     display: grid;
-    grid-template-rows: 0.5fr 10fr 1fr;
+    grid-template-rows: 80px 1fr 80px;
     min-height: 100vh;
 }
 
 .content__container{
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 200px 1fr;
     grid-template-rows: 1fr;
+    height: auto;
 }
 
+.fixed-sidebar{
+    background-color: #1f1f1f;
+    height: 100%;
+}
+
+.closed{
+    display: none;
+}
+
+.sidebar-closed{
+    grid-template-columns: 1fr;
+}

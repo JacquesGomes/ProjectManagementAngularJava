@@ -4,6 +4,21 @@
     padding: 0;
     margin: 0;
     font-family: 'Times New Roman', Times, serif;
-    color: #fff;
 }
+
+ul, li{
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    color: #fff;
+    font-size: 18px;
+}
+
+button, select{
+    cursor: pointer;
+    font-size: 18px;
+}
+
 

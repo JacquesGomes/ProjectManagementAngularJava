@@ -1,8 +1,8 @@
 <div class="app__container">
-  <app-header></app-header>
+  <app-header (sidebarToggled)="toggleSidebar($event)"></app-header>
 
-  <div class="content__container">
-    <app-sidebar></app-sidebar>
+  <div class="content__container" [ngClass]="{'sidebar-closed': !isSidebarOpen}">
+    <app-sidebar class="fixed-sidebar" [ngClass]="{'closed': !isSidebarOpen}"></app-sidebar>
     <div>
       <router-outlet></router-outlet>
     </div>
