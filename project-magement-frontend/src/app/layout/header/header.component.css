@@ -1,0 +1,7 @@
+/* header.component.css */
+.fixed-header {
+    background-color: #e91d63;
+    height: 60px;
+    max-height: 60px;
+  }
+  

@@ -1,0 +1,12 @@
+.app__container{
+    display: grid;
+    grid-template-rows: 0.5fr 10fr 1fr;
+    min-height: 100vh;
+}
+
+.content__container{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr;
+}
+
