@@ -1,14 +1,17 @@
 
 .sidebar-content{
   padding: 30px 20px;
-  
   font-size: 22px;
   display: flex;
   flex-direction: column;
   gap: 30px;
-  cursor: pointer;
-  
+  cursor: pointer;  
 }
+
+.sidebar-mid{
+  border: #e91d63 solid 1px;
+}
+
 
 .sidebar-content p:hover{
   color: #e91d63;
