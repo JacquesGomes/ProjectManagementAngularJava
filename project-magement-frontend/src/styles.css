@@ -40,6 +40,10 @@ button, select{
     background-color: white;
     padding: 20px;
     z-index: 1000;
+    width: 80%;
+    height: 80%;
+    max-width: 700px;
+    overflow: scroll;
   }
   
   .close-button {
@@ -48,3 +52,39 @@ button, select{
     right: 10px;
   }
   
+  .modal-btn{
+    padding: 6px 20px;
+    font-size: 16px; 
+    margin-top: 10px;
+    border: 1px solid rgba(27, 31, 35, 0.15);
+    box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+    color: #24292E;
+    background-color: #d5d5d6;
+  }
+
+.modal-btn:hover {
+  background-color: #e0e0e0;
+  text-decoration: none;
+  transition-duration: 0.1s;
+}
+
+select{
+  
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+  padding: 2px 10px;
+  color: #000000;
+  background-color: #d5d5d6;
+  background-image: none;
+  cursor: pointer;
+  color: #24292E;
+  font-size: 16px; 
+}
+li{
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+

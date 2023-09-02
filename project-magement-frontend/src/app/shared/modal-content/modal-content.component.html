@@ -1,44 +1,58 @@
-<h1>Detalhes do Projeto</h1>
-<ul>
-    <li><strong>Nome do Projeto:</strong> Sistema de Gerenciamento de Tarefas</li>
-    <li><strong>Descrição:</strong> Desenvolvimento de um aplicativo web para gerenciamento de tarefas pessoais e de equipe.</li>
-    <li><strong>Começo:</strong> 03/02/2000</li>
-    <li><strong>Última Alteração:</strong> 01/09/2023</li>
-    <li><strong>Prazo Final:</strong> 03/01/2025</li>
-    <li><strong>Status:</strong> <span class="status-pendente">Pendente</span></li>
-    <li><strong>Prioridade:</strong> <span class="prioridade-baixa">Muito Baixa</span></li>
-    <li><strong>Equipe Responsável:</strong> Equipe de Desenvolvimento de Software</li>
-    <li><strong>Tipo de Projeto:</strong> Desenvolvimento de Software</li>
-    <li><strong>Orçamento:</strong> R$ 50.000,00</li>
-    <li><strong>Recursos:</strong> Servidores, IDEs, Equipe de Desenvolvimento</li>
-    <li><strong>Marcos:</strong>
-        <ul>
-            <li>Fase de Planejamento (Concluída)</li>
-            <li>Desenvolvimento da Interface do Usuário (Em Progresso)</li>
-            <li>Testes e Depuração (Previsto)</li>
-        </ul>
+<div class="project-details">
+  <h1>Detalhes do Projeto</h1>
+  <ul>
+    <li><strong>Nome do Projeto:</strong> {{ projectData['Detalhes do Projeto']['Nome do Projeto'] }}</li>
+    <li><strong>Descrição:</strong> {{ projectData['Detalhes do Projeto']['Descrição'] }}</li>
+    <li><strong>Começo:</strong> {{ projectData['Detalhes do Projeto']['Começo'] }}</li>
+    <li><strong>Última Alteração:</strong> {{ projectData['Detalhes do Projeto']['Última Alteração'] }}</li>
+    <li><strong>Prazo Final:</strong> {{ projectData['Detalhes do Projeto']['Prazo Final'] }}</li>
+    <li><strong>Status:</strong> {{ projectData['Detalhes do Projeto']['Status'] }}</li>
+    <li><strong>Prioridade:</strong> {{ projectData['Detalhes do Projeto']['Prioridade'] }}</li>
+    <li><strong>Equipe Responsável:</strong> {{ projectData['Detalhes do Projeto']['Equipe Responsável'] }}</li>
+    <li><strong>Tipo de Projeto:</strong> {{ projectData['Detalhes do Projeto']['Tipo de Projeto'] }}</li>
+    <li><strong>Orçamento:</strong> {{ projectData['Detalhes do Projeto']['Orçamento'] }}</li>
+    <li><strong>Recursos:</strong> {{ projectData['Detalhes do Projeto']['Recursos'] }}</li>
+  </ul>
+
+  <h2>Marcos</h2>
+  <ul>
+    <li *ngFor="let marco of projectData['Marcos']">
+      {{ marco.Nome }} ({{ marco.Status }})
     </li>
-    <li><strong>Tarefas:</strong>
-        <ul>
-            <li>Definir Requisitos (Concluída)</li>
-            <li>Criar Protótipo (Concluída)</li>
-            <li>Implementar Frontend (Em Progresso)</li>
-            <li>Implementar Backend (Previsto)</li>
-        </ul>
+  </ul>
+
+  <h2>Tarefas</h2>
+  <ul>
+    <li *ngFor="let tarefa of projectData['Tarefas']">
+      {{ tarefa.Nome }} ({{ tarefa.Status }})
     </li>
-    <li><strong>Riscos:</strong>
-        <ul>
-            <li>Escassez de Recursos Humanos</li>
-            <li>Mudanças nos Requisitos do Cliente</li>
-        </ul>
+  </ul>
+
+  <h2>Riscos</h2>
+  <ul>
+    <li *ngFor="let risco of projectData['Riscos']">
+      {{ risco }}
     </li>
-    <li><strong>Requisitos:</strong>
-        <ul>
-            <li>Interface de Usuário Intuitiva</li>
-            <li>Registro de Tarefas</li>
-            <li>Atribuição de Tarefas a Membros da Equipe</li>
-        </ul>
+  </ul>
+
+  <h2>Requisitos</h2>
+  <ul>
+    <li *ngFor="let requisito of projectData['Requisitos']">
+      {{ requisito }}
     </li>
-    <li><strong>Comunicação:</strong> Reuniões de Status Semanais, Slack</li>
-    <li><strong>Documentação:</strong> Manual do Usuário, Documentação Técnica</li>
-</ul>
+  </ul>
+
+  <h2>Comunicação</h2>
+  <ul>
+    <li *ngFor="let comunicacao of projectData['Comunicação']">
+      {{ comunicacao }}
+    </li>
+  </ul>
+
+  <h2>Documentação</h2>
+  <ul>
+    <li *ngFor="let doc of projectData['Documentação']">
+      {{ doc }}
+    </li>
+  </ul>
+</div>

@@ -1,24 +1,32 @@
 <div class="project__container">
     <div class="box">
         <div class="box-content">
-            <h2>Nome do projeto</h2>
-            <p>Descrição: Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-            <ul>
-                <li>Começo: 03/02/2000</li>
-                <li>Última alteração: 01/09/2023</li>
-                <li>Prazo final: 03/01/2025</li>
-            </ul>
+            <div class="box-header">
+                <h3>Nome do projeto</h3>
+                <div class="box-btns">
+                    <button>[]</button>
+                    <button>X</button>
+                </div>
+            </div>
+            <p class="basic-description">Descrição: Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+
+            <div>
+                <p>Começo: 03/02/2000</p>
+                <p>Última alteração: 01/09/2023</p>
+                <p>Prazo final: 03/01/2025</p>
+            </div>
+
 
             <ul>
             
                 <li>
                     <label for="status">Status: </label>
                     <select id="status" name="status">
-                        <option value="pendent">Pendente</option>
-                        <option value="in-progress">Em andamento</option>
-                        <option value="on-hold">Pausado</option>
-                        <option value="cancelled">Cancelado</option>
-                        <option value="completed">Completo</option>
+                        <option value="pendente">Pendente</option>
+                        <option value="em andamento">Em andamento</option>
+                        <option value="pausado">Pausado</option>
+                        <option value="cancelado">Cancelado</option>
+                        <option value="completo">Completo</option>
                     </select>
                 </li>
             
@@ -29,15 +37,16 @@
                 <li>
                     <label for="prioridade">Prioridade: </label>
                     <select id="prioridade" name="prioridade">
-                        <option value="very-low">Muito baixa</option>
-                        <option value="low">Baixa</option>
-                        <option value="medium">Média</option>
-                        <option value="high">Alta</option>
-                        <option value="very-high">Muito Alta</option>
+                        <option value="muito baixa">Muito baixa</option>
+                        <option value="baixa">Baixa</option>
+                        <option value="média">Média</option>
+                        <option value="alta">Alta</option>
+                        <option value="muito alta">Muito Alta</option>
                     </select>
                 </li>
             
             </ul>
+            
             <ul>
                 <li><app-modal-dialog></app-modal-dialog></li>
             </ul>

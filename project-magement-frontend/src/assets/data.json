@@ -1,0 +1,64 @@
+{
+  "Detalhes do Projeto": {
+    "Nome do Projeto": "Sistema de Gerenciamento de Tarefas",
+    "Descrição": "Desenvolvimento de um aplicativo web para gerenciamento de tarefas pessoais e de equipe.",
+    "Começo": "03/02/2000",
+    "Última Alteração": "01/09/2023",
+    "Prazo Final": "03/01/2025",
+    "Status": "Pendente",
+    "Prioridade": "Muito Baixa",
+    "Equipe Responsável": "Equipe de Desenvolvimento de Software",
+    "Tipo de Projeto": "Desenvolvimento de Software",
+    "Orçamento": "R$ 50.000,00",
+    "Recursos": "Servidores, IDEs, Equipe de Desenvolvimento"
+  },
+  "Marcos": [
+    {
+      "Nome": "Fase de Planejamento",
+      "Status": "Concluída"
+    },
+    {
+      "Nome": "Desenvolvimento da Interface do Usuário",
+      "Status": "Em Progresso"
+    },
+    {
+      "Nome": "Testes e Depuração",
+      "Status": "Previsto"
+    }
+  ],
+  "Tarefas": [
+    {
+      "Nome": "Definir Requisitos",
+      "Status": "Concluída"
+    },
+    {
+      "Nome": "Criar Protótipo",
+      "Status": "Concluída"
+    },
+    {
+      "Nome": "Implementar Frontend",
+      "Status": "Em Progresso"
+    },
+    {
+      "Nome": "Implementar Backend",
+      "Status": "Previsto"
+    }
+  ],
+  "Riscos": [
+    "Escassez de Recursos Humanos",
+    "Mudanças nos Requisitos do Cliente"
+  ],
+  "Requisitos": [
+    "Interface de Usuário Intuitiva",
+    "Registro de Tarefas",
+    "Atribuição de Tarefas a Membros da Equipe"
+  ],
+  "Comunicação": [
+    "Reuniões de Status Semanais",
+    "Slack"
+  ],
+  "Documentação": [
+    "Manual do Usuário",
+    "Documentação Técnica"
+  ]
+}
