@@ -32,18 +32,18 @@ public class ProjectController {
     }
 
 
-    @PostMapping("/create")
+    @PostMapping("/create-project")
     public ResponseEntity<Project> createProject(@RequestBody Project project) {
         Project createdProject = projectService.createProject(project);
         return new ResponseEntity<>(createdProject, HttpStatus.CREATED);
     }
 
-    @PutMapping("/update")
+    @PutMapping("/update-project")
     public Project updateProject(@RequestBody Project updatedProject) {
         return projectService.updateProject(updatedProject);
     }
 
-    @DeleteMapping("/delete/{projectId}")
+    @DeleteMapping("/delete-project/{projectId}")
     public void deleteProject(@PathVariable Long projectId) {
         projectService.deleteProject(projectId);
     }

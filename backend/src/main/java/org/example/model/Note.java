@@ -16,8 +16,8 @@ public class Note {
 
     private String descricao;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "project_id")
-    private Project project;
+    @Column(name = "project_id")
+    private Long projectId;
+
 
 }

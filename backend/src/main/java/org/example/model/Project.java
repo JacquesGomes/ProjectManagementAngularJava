@@ -35,9 +35,6 @@ public class Project {
     @JoinColumn(name = "project_details_id")
     private ProjectDetails projectDetails;
 
-    @OneToMany(mappedBy = "project", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<Note> notes;
-
     public ProjectDetails getProjectDetails() {
         return projectDetails;
     }
@@ -46,11 +43,4 @@ public class Project {
         this.projectDetails = projectDetails;
     }
 
-    public List<Note> getNotes() {
-        return notes;
-    }
-
-    public void setNotes(List<Note> notes) {
-        this.notes = notes;
-    }
 }
