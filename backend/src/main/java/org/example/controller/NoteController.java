@@ -34,7 +34,7 @@ public class NoteController {
     }
 
 
-    @PutMapping("/note")
+    @PutMapping("/notes")
     public Note updateNote(@RequestBody Note updatedNote){
         return noteService.updateNote(updatedNote);
     }
