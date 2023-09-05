@@ -10,8 +10,10 @@ import java.util.List;
 @Service
 public class IdeaService {
 
-    @Autowired
-    public IdeaRepository ideaRepository;
+    private final IdeaRepository ideaRepository;
+    public IdeaService(IdeaRepository ideaRepository){
+        this.ideaRepository = ideaRepository;
+    }
 
     public Idea createIdea(Idea idea){
         Idea createdIdead = ideaRepository.saveAndFlush(idea);

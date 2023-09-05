@@ -8,12 +8,15 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class ProjectController {
 
-    @Autowired
-    private ProjectService projectService;
+    private final ProjectService projectService;
+    public ProjectController(ProjectService projectService){
+        this.projectService = projectService;
+    }
 
     //crtl + shift + / = commment block or uncomment
     @GetMapping("/projectsDetails")
@@ -31,19 +34,24 @@ public class ProjectController {
         return projectService.getProjectWithDetails(id);
     }
 
+    @GetMapping("/projectBasicInfo/{id}")
+    public Project getProjectById(@PathVariable Long id){
+        return projectService.getProjectBasicInfo(id);
+    }
 
-    @PostMapping("/create-project")
+
+    @PostMapping("/project")
     public ResponseEntity<Project> createProject(@RequestBody Project project) {
         Project createdProject = projectService.createProject(project);
         return new ResponseEntity<>(createdProject, HttpStatus.CREATED);
     }
 
-    @PutMapping("/update-project")
+    @PutMapping("/projects")
     public Project updateProject(@RequestBody Project updatedProject) {
         return projectService.updateProject(updatedProject);
     }
 
-    @DeleteMapping("/delete-project/{projectId}")
+    @DeleteMapping("/projects/{projectId}")
     public void deleteProject(@PathVariable Long projectId) {
         projectService.deleteProject(projectId);
     }

@@ -10,8 +10,12 @@ import java.util.List;
 @RestController
 public class IdeaController {
 
-    @Autowired
-    IdeaService ideaService;
+
+    private final IdeaService ideaService;
+    public IdeaController(IdeaService ideaService){
+        this.ideaService = ideaService;
+    }
+
 
     @GetMapping("/ideas")
     public List<Idea> getAllIdeas(){
@@ -23,17 +27,17 @@ public class IdeaController {
         return ideaService.getAllIdeasById(id);
     }
 
-    @PostMapping("/create-idea")
+    @PostMapping("/idea")
     public Idea createIdea(@RequestBody Idea newIdea){
         return ideaService.createIdea(newIdea);
     }
 
-    @PostMapping("/update-idea")
+    @PutMapping("/ideas")
     public Idea updateIdea(@RequestBody Idea updatedIdea){
         return ideaService.updateIdea(updatedIdea);
     }
 
-    @DeleteMapping("/delete-idea")
+    @DeleteMapping("/ideas/{id}")
     public void deleteIdea(@PathVariable Long id){
         ideaService.deleteIdea(id);
     }

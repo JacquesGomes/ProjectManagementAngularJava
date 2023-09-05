@@ -1,9 +1,7 @@
 package org.example.service;
 
-import org.example.model.Idea;
 import org.example.model.Note;
 import org.example.repository.NoteRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -11,8 +9,11 @@ import java.util.List;
 @Service
 public class NoteService {
 
-    @Autowired
-    public NoteRepository noteRepository;
+    private final NoteRepository noteRepository;
+    public NoteService(NoteRepository noteRepository){
+        this.noteRepository = noteRepository;
+    }
+
 
     public Note createNote(Note Note){
         Note createdNoted = noteRepository.saveAndFlush(Note);

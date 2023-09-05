@@ -6,13 +6,17 @@ import org.example.repository.ProjectRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
+import java.util.Optional;
 
 
 @Service
 public class ProjectService {
 
-    @Autowired
-    public ProjectRepository projectRepository;
+    private final ProjectRepository projectRepository;
+    public ProjectService(ProjectRepository projectRepository){
+        this.projectRepository = projectRepository;
+    }
+
 
     public Project createProject(Project project){
         Project createdProject = projectRepository.saveAndFlush(project);
@@ -30,6 +34,14 @@ public class ProjectService {
 
     public List<Project> getAllProjectsWithDetails() {
         return projectRepository.getAllProjectsWithDetails();
+    }
+
+    public Project getProjectBasicInfo(Long id){
+        Project project = projectRepository.findProjectById(id);
+        project.setProjectDetails(null);
+        return project;
+
+
     }
 
     public Project getProjectWithDetails(Long id) {

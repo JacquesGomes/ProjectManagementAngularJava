@@ -16,4 +16,6 @@ public interface ProjectRepository extends JpaRepository<Project, Long> {
     @Query("SELECT p FROM Project p LEFT JOIN FETCH p.projectDetails WHERE p.id = :id")
     Project getProjectWithEagerDetails(Long id);
 
+    Project findProjectById(Long id);
+
 }

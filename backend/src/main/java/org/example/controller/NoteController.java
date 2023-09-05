@@ -11,8 +11,12 @@ import java.util.List;
 @RestController
 public class NoteController {
 
-    @Autowired
-    NoteService noteService;
+
+    private final NoteService noteService;
+
+    public NoteController(NoteService noteService){
+        this.noteService = noteService;
+    }
 
     @GetMapping("/notes")
     public List<Note> getAllNotes(){
@@ -24,18 +28,18 @@ public class NoteController {
         return noteService.getAllNotesById(id);
     }
 
-    @PostMapping("/create-note")
+    @PostMapping("/note")
     public Note createNote(@RequestBody Note newNote){
         return noteService.createNote(newNote);
     }
 
 
-    @PostMapping("/update-note")
+    @PutMapping("/note")
     public Note updateNote(@RequestBody Note updatedNote){
         return noteService.updateNote(updatedNote);
     }
 
-    @DeleteMapping("/delete-note/{id}")
+    @DeleteMapping("/notes/{id}")
     public void deleteNote(@PathVariable Long id){
         noteService.deleteNote(id);
     }
